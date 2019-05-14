@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DogDate.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]")] //http://localhost:5000/api/values
     [ApiController]
     public class ValuesController : ControllerBase
     {

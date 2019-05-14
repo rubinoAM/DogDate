@@ -1,0 +1,14 @@
+/Users/michaelrubino/Development/DogDate/DogDate.API/bin/Debug/netcoreapp2.2/DogDate.API.deps.json
+/Users/michaelrubino/Development/DogDate/DogDate.API/bin/Debug/netcoreapp2.2/DogDate.API.runtimeconfig.json
+/Users/michaelrubino/Development/DogDate/DogDate.API/bin/Debug/netcoreapp2.2/DogDate.API.runtimeconfig.dev.json
+/Users/michaelrubino/Development/DogDate/DogDate.API/bin/Debug/netcoreapp2.2/DogDate.API.dll
+/Users/michaelrubino/Development/DogDate/DogDate.API/bin/Debug/netcoreapp2.2/DogDate.API.pdb
+/Users/michaelrubino/Development/DogDate/DogDate.API/obj/Debug/netcoreapp2.2/DogDate.API.csprojAssemblyReference.cache
+/Users/michaelrubino/Development/DogDate/DogDate.API/obj/Debug/netcoreapp2.2/DogDate.API.csproj.CoreCompileInputs.cache
+/Users/michaelrubino/Development/DogDate/DogDate.API/obj/Debug/netcoreapp2.2/DogDate.API.RazorAssemblyInfo.cache
+/Users/michaelrubino/Development/DogDate/DogDate.API/obj/Debug/netcoreapp2.2/DogDate.API.RazorAssemblyInfo.cs
+/Users/michaelrubino/Development/DogDate/DogDate.API/obj/Debug/netcoreapp2.2/DogDate.API.AssemblyInfoInputs.cache
+/Users/michaelrubino/Development/DogDate/DogDate.API/obj/Debug/netcoreapp2.2/DogDate.API.AssemblyInfo.cs
+/Users/michaelrubino/Development/DogDate/DogDate.API/obj/Debug/netcoreapp2.2/DogDate.API.RazorTargetAssemblyInfo.cache
+/Users/michaelrubino/Development/DogDate/DogDate.API/obj/Debug/netcoreapp2.2/DogDate.API.dll
+/Users/michaelrubino/Development/DogDate/DogDate.API/obj/Debug/netcoreapp2.2/DogDate.API.pdb
