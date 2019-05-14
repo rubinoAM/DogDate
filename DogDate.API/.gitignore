@@ -1,1 +1,4 @@
-DogDate.db
+*.db
+.vscode/
+bin/
+obj/
