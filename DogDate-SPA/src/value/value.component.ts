@@ -20,6 +20,7 @@ export class ValueComponent implements OnInit {
       .subscribe(
         (resp) => {
           this.values = resp;
+          console.log(resp);
         },
         (err) => {
           console.log(err);
