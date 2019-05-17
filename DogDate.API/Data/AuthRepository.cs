@@ -5,6 +5,11 @@ namespace DogDate.API.Data
 {
     public class AuthRepository : IAuthRepository
     {
+        private readonly DataContext _context;
+        public AuthRepository(DataContext context)
+        {
+            this._context = context;
+        }
         public Task<User> Register(User user, string password)
         {
             throw new System.NotImplementedException();
