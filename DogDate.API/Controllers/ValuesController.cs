@@ -10,7 +10,7 @@ namespace DogDate.API.Controllers
 {
     [Route("api/[controller]")] //http://localhost:5000/api/values
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class ValuesController : ControllerBase //ControllerBase doesn't provide views. Angular will provide those.
     {
         private readonly DataContext _context;
         public ValuesController(DataContext context)
