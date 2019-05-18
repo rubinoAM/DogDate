@@ -19,8 +19,6 @@ namespace DogDate.API.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register(UserForRegisterDTO userForRegisterDto)
         {
-            //VALIDATION
-
             userForRegisterDto.Username = userForRegisterDto.Username.ToLower();
 
             if(await _repo.UserExists(userForRegisterDto.Username))
