@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 using DogDate.API.Data;
 
 namespace DogDate.API.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")] //http://localhost:5000/api/values
     [ApiController]
     public class ValuesController : ControllerBase //ControllerBase doesn't provide views. Angular will provide those.
