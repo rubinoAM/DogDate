@@ -1,5 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.Extensions.Configuration;
 using System.Threading.Tasks;
+using System.Text;
+using System.Security.Claims;
 using DogDate.API.Data;
 using DogDate.API.Models;
 using DogDate.API.Dtos;
@@ -11,9 +15,11 @@ namespace DogDate.API.Controllers
     public class AuthController : ControllerBase
     {
         private readonly IAuthRepository _repo;
-        public AuthController(IAuthRepository repo)
+        private readonly IConfiguration _config;
+        public AuthController(IAuthRepository repo, IConfiguration config)
         {
-            this._repo = repo;
+            _repo = repo;
+            _config = config;
         }
 
         [HttpPost("register")]
@@ -37,7 +43,19 @@ namespace DogDate.API.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login(UserForLoginDTO userForLoginDto)
         {
+            var userFromRepo = await _repo.Login(userForLoginDto.Username, userForLoginDto.Password);
 
+            if(userFromRepo == null)
+                return Unauthorized();
+
+            var claims = new[]
+            {
+                new Claim(ClaimTypes.NameIdentifier, userFromRepo.Id.ToString()),
+                new Claim(ClaimTypes.Name, userFromRepo.Username)
+            };
+
+            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config.GetSection("AppSettings:Token").Value));
+            return StatusCode(201);
         }
     }
 }
