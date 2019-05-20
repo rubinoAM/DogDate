@@ -1,8 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.Extensions.Configuration;
+using System;
 using System.Threading.Tasks;
 using System.Text;
+using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using DogDate.API.Data;
 using DogDate.API.Models;
@@ -55,7 +57,18 @@ namespace DogDate.API.Controllers
             };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config.GetSection("AppSettings:Token").Value));
-            return StatusCode(201);
+            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
+            
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(claims),
+                Expires = DateTime.Now.AddDays(1),
+                SigningCredentials = creds
+            };
+            var tokenHandler = new JwtSecurityTokenHandler();
+            
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+            return Ok(new {token = tokenHandler.WriteToken(token)});
         }
     }
 }
