@@ -1,14 +1,14 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
 using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
 using System;
-using System.Threading.Tasks;
-using System.Text;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Text;
+using System.Threading.Tasks;
 using DogDate.API.Data;
-using DogDate.API.Models;
 using DogDate.API.Dtos;
+using DogDate.API.Models;
 
 namespace DogDate.API.Controllers
 {

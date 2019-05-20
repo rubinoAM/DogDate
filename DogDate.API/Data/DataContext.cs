@@ -1,5 +1,5 @@
-using DogDate.API.Models;
 using Microsoft.EntityFrameworkCore;
+using DogDate.API.Models;
 
 namespace DogDate.API.Data
 {
