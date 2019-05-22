@@ -1,7 +1,3 @@
-mat-sidenav-container{
-    height:100%;
-}
-
 mat-toolbar, mat-sidenav a{
     font-family:"Teko",sans-serif;
 }
@@ -29,6 +25,7 @@ mat-toolbar button{
 
 .navigation-items{
     list-style-type:none;
+    cursor:pointer;
 }
 
 #brand{
