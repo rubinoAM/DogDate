@@ -26,3 +26,14 @@ mat-toolbar button{
     background:none;
     color:white;
 }
+
+#brand{
+    font-size:2.25rem;
+}
+
+@media screen and (max-width:599px){
+    #brand{
+        font-size:2rem;
+        margin:0 auto;
+    }
+}
