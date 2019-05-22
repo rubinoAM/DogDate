@@ -27,6 +27,10 @@ mat-toolbar button{
     color:white;
 }
 
+.navigation-items{
+    list-style-type:none;
+}
+
 #brand{
     font-size:2.25rem;
 }
