@@ -6,8 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  opened = true;
 
   constructor() { }
+
+  toggleSidenav() {
+    this.opened = true;
+  }
 
   ngOnInit() {
   }

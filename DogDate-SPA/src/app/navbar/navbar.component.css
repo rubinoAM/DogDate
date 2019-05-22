@@ -1,0 +1,22 @@
+mat-sidenav-container{
+    height:100%;
+}
+
+mat-toolbar, mat-sidenav a{
+    font-family:"Teko",sans-serif;
+}
+
+mat-sidenav{
+    padding:1rem;
+    width:12.5rem;
+    background:#28b964;
+}
+
+mat-sidenav a span.label{
+    font-size:1.25rem;
+}
+
+mat-sidenav a mat-icon.icon{
+    font-size:1rem;
+    margin-top:0.375rem;
+}

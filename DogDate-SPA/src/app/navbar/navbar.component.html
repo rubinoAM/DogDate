@@ -1,44 +1,26 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav class="sidenav" #sidenav role="navigation">
+  <mat-sidenav [(opened)]="opened" #sidenav role="navigation">
     <mat-nav-list>
+      <a mat-list-item>
+        <mat-icon class="icon">input</mat-icon>
+        <span class="label">Login</span>
+      </a>
       <a mat-list-item>
         <mat-icon class="icon">home</mat-icon>
         <span class="label">Home</span>
       </a>
+      <a mat-list-item>
+        <mat-icon class="icon">dashboard</mat-icon>
+        <span class="label">Dashboard</span>
+      </a>
+      <a mat-list-item>
+        <mat-icon class="icon">input</mat-icon>
+        <span class="label">Logout</span>
+      </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      <div fxHide.gt-xs>
-        <button mat-icon-button>
-          <mat-icon>menu</mat-icon>
-        </button>
-      </div>
-      <div>
-        <a>DogDate</a>
-      </div>
-      <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
-        <ul fxLayout fxLayoutGap="20px" class="navigation-items">
-          <li>
-            <a>
-              <mat-icon class="icon">home</mat-icon>
-              <span class="label">Home</span>
-            </a>
-          </li>
-          <li>
-            <mat-icon class="icon">home</mat-icon>
-            <span class="label">Home</span>
-          </li>
-          <li>
-            <mat-icon class="icon">home</mat-icon>
-            <span class="label">Home</span>
-          </li>
-          <li>
-            <mat-icon class="icon">home</mat-icon>
-            <span class="label">Home</span>
-          </li>
-        </ul>
-      </div>
-    </mat-toolbar>
+    <span>Main</span>
+    <button mat-raised-button (click)="toggleSidenav()">Toggle Opened</button>
   </mat-sidenav-content>
 </mat-sidenav-container>

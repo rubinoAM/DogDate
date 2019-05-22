@@ -3,6 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ValueComponent } from '../value/value.component';
@@ -20,6 +21,7 @@ import { NavbarComponent } from './navbar/navbar.component';
       HttpClientModule,
       BrowserAnimationsModule,
       FlexLayoutModule,
+      FormsModule,
       MaterialModule
    ],
    providers: [],
