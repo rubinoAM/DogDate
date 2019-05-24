@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
   opened = false;
   loggedIn = false;
+  model: any = {};
 
   constructor() { }
 
@@ -16,6 +17,10 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  login() {
+    console.log(this.model);
   }
 
 }
