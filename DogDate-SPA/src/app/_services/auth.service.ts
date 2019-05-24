@@ -11,7 +11,6 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   login(model: any) {
-    console.log(this.baseUrl);
     return this.http.post(this.baseUrl + 'login', model)
       .pipe(
         map((resp: any) => {
@@ -21,6 +20,10 @@ export class AuthService {
           }
         })
       );
+  }
+
+  register(model: any) {
+    return this.http.post(this.baseUrl + 'register', model);
   }
 
 }
