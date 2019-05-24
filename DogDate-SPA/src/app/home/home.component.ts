@@ -20,12 +20,15 @@ export class HomeComponent implements OnInit {
     this.registerMode = true;
   }
 
+  cancelRegisterMode(registerMode: boolean) {
+    this.registerMode = registerMode;
+  }
+
   getValues() {
     this.http.get('http://localhost:8889/api/values')
       .subscribe(
         (resp) => {
           this.values = resp;
-          // console.log(resp);
         },
         (err) => {
           console.log(err);
