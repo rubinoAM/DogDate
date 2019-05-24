@@ -7,7 +7,6 @@ import { AuthService } from '../_services/auth.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  loggedIn = false;
   model: any = {};
 
   constructor(private authService: AuthService) { }
@@ -22,6 +21,16 @@ export class NavbarComponent implements OnInit {
       }, err => {
         console.log('Failed to login.');
       });
+  }
+
+  loggedIn() {
+    const token = localStorage.getItem('token');
+    return !!token; // returns a boolean
+  }
+
+  logout() {
+    localStorage.removeItem('token');
+    console.log('Logged out succesfully.');
   }
 
 }
