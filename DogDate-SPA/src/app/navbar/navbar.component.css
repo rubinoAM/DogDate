@@ -1,4 +1,8 @@
-mat-toolbar, mat-sidenav a{
+nav.navbar{
+    font-family:"Teko",sans-serif;
+}
+
+/* mat-toolbar, mat-sidenav a{
     font-family:"Teko",sans-serif;
 }
 
@@ -37,4 +41,4 @@ mat-toolbar button{
         font-size:2rem;
         margin:0 auto;
     }
-}
+} */
