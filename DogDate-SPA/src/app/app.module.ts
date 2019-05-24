@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { ValueComponent } from '../value/value.component';
 import { MaterialModule } from './material.module';
 import { NavbarComponent } from './navbar/navbar.component';
+import { AuthService } from './navbar/_services/auth.service';
 
 @NgModule({
    declarations: [
@@ -22,7 +23,9 @@ import { NavbarComponent } from './navbar/navbar.component';
       FormsModule,
       MaterialModule
    ],
-   providers: [],
+   providers: [
+      AuthService
+   ],
    bootstrap: [
       AppComponent
    ]

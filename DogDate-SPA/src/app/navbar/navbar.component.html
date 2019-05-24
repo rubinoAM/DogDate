@@ -19,26 +19,21 @@
     </li>
   </ul>
 
-  <!-- <div *ngIf="!loggedIn"> -->
-    <form #loginForm="ngForm" class="form-inline mt-2 mt-md-0" (ngSubmit)="login()">
-      <input class="form-control mr-sm-2"
-        name="username" type="text" placeholder="Username"
-        required [(ngModel)]="model.username"
-        #username="ngModel">
-      <input class="form-control mr-sm-2"
-        name="password" type="password" placeholder="Password"
-        required [(ngModel)]="model.password"
-        #password="ngModel">
-      <button [disabled]="!loginForm.valid" class="btn btn-success my-2 my-sm-0" type="submit">Login</button>
-    </form>
-  <!-- </div> -->
-  <!-- <div *ngIf="loggedIn">
-    <form #logoutForm="ngForm" class="form-inline mt-2 mt-md-0">
-      <button class="btn btn-success my-2 my-sm-0" type="submit">Logout</button>
-    </form>
-  </div> -->
-
+  <form #loginForm="ngForm" class="form-inline mt-2 mt-md-0" (ngSubmit)="login()">
+    <input class="form-control mr-sm-2"
+      name="username" type="text" placeholder="Username"
+      required [(ngModel)]="model.username"
+      #username="ngModel">
+    <input class="form-control mr-sm-2"
+      name="password" type="password" placeholder="Password"
+      required [(ngModel)]="model.password"
+      #password="ngModel">
+    <button [disabled]="!loginForm.valid" class="btn btn-success my-2 my-sm-0" type="submit">Login</button>
+  </form>
 </nav>
+
+<!-- 
+Form Tester:
 
 <pre>
   Form Valid:{{ loginForm.valid }}
@@ -53,4 +48,4 @@
   Password Touched:{{ password.touched }}
   Password Dirty:{{ password.dirty }}
   Password Value:{{ password.value }}
-</pre>
+</pre> -->
