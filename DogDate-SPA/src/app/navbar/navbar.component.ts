@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../_services/auth.service';
 
 @Component({
   selector: 'app-navbar',
@@ -6,21 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  opened = false;
   loggedIn = false;
   model: any = {};
 
-  constructor() { }
-
-  toggleSidenav() {
-    this.opened = true;
-  }
+  constructor(private authService: AuthService) { }
 
   ngOnInit() {
   }
 
   login() {
-    console.log(this.model);
+    this.authService.login(this.model)
+      .subscribe(next => {
+        console.log('Logged in successfully.');
+      }, err => {
+        console.log('Failed to login.');
+      });
   }
 
 }
