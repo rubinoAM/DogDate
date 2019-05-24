@@ -13,11 +13,11 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
   }
 
-  register(){
+  register() {
     console.log(this.model);
   }
 
-  cancel(){
+  cancel() {
     console.log('BARK BARK');
   }
 
