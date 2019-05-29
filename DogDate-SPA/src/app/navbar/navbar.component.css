@@ -13,3 +13,11 @@ nav .navbar-brand{
 nav .nav-link{
     font-size:1.25rem;
 }
+
+.dropdown-toggle{
+    cursor:pointer;
+}
+
+.dropdown-menu{
+    margin-top:1.375rem;
+}

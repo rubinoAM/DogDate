@@ -3,6 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { BsDropdownModule } from 'ngx-bootstrap';
 
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
@@ -25,7 +26,8 @@ import { AlertifyService } from './_services/alertify.service';
       HttpClientModule,
       BrowserAnimationsModule,
       FormsModule,
-      MaterialModule
+      MaterialModule,
+      BsDropdownModule.forRoot()
    ],
    providers: [
       AuthService,
