@@ -19,7 +19,7 @@ export class NavbarComponent implements OnInit {
       .subscribe(next => {
         console.log('Logged in successfully.');
       }, err => {
-        console.log('Failed to login.');
+        console.log(err);
       });
   }
 
