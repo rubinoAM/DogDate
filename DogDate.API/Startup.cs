@@ -18,6 +18,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using DogDate.API.Data;
+using DogDate.API.Helpers;
 
 namespace DogDate.API
 {
@@ -68,6 +69,7 @@ namespace DogDate.API
                         var err = context.Features.Get<IExceptionHandlerFeature>();
                         if(err != null)
                         {
+                            context.Response.AddApplicationError(err.Error.Message);
                             await context.Response.WriteAsync(err.Error.Message);
                         }
                     });
