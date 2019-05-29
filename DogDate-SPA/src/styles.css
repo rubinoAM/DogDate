@@ -10,3 +10,7 @@ html, body{
 body{
     height:100vh;
 }
+
+.ajs-message{
+    font-family:"Teko",sans-serif;
+}

@@ -25,8 +25,10 @@ export class NavbarComponent implements OnInit {
   }
 
   loggedIn() {
-    const token = localStorage.getItem('token');
-    return !!token; // returns a boolean
+    return this.authService.loggedIn();
+    /*Old Code:
+      const token = localStorage.getItem('token');
+      return !!token; // returns a boolean */
   }
 
   logout() {
